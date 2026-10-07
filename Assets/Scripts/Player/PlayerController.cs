@@ -110,7 +110,9 @@ public class PlayerController : MonoBehaviour
         {
             pos.x = Mathf.Clamp(pos.x, minX, maxX);
             pos.z = Mathf.Clamp(pos.z, minZ, maxZ);
+            characterController.enabled = false;
             transform.position = pos;
+            characterController.enabled = true;
         }
     }
 }
